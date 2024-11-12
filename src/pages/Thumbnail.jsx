@@ -10,6 +10,7 @@ function TibialNail() {
     const [data, setData] = useState(null);  // Product data
     const [loading, setLoading] = useState(true);  // Loading state
     const { name } = useParams();
+    console.log("Name Params" ,name)
 
     // Function to handle material selection
     const handleMaterialClick = (material) => {

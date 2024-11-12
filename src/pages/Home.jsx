@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-  
+
 
   return (
     <>
@@ -22,7 +22,7 @@ function Home() {
             <div className="col-md-6">
               <div className="textSection">
                 <h1 className="h2Text">
-                
+
                   Your Trusted Source for <br />
                   <span>
                     Quality Orthopedic <br />
@@ -39,7 +39,7 @@ function Home() {
               </div>
             </div>
             <div className="col-md-6 text-center">
-              <img src={Homelogo} alt="Homelogo" className="img-fluid"  style={{ height: '350px', width:"100%" }}  />
+              <img src={Homelogo} alt="Homelogo" className="img-fluid" style={{ height: '350px', width: "100%" }} />
             </div>
           </div>
 
@@ -50,16 +50,16 @@ function Home() {
           <div className="row mt-4">
             <div class="icon-container">
               <div class="icon-card">
-                <img alt="Made in India logo with Indian flag colors and text 'Made in India'"  src={flag} height="100" width="100" />
+                <img alt="Made in India logo with Indian flag colors and text 'Made in India'" src={flag} height="100" width="100" />
               </div>
               <div class="icon-card">
-                <img alt="ISO logo with red text 'ISO' and a globe"  src={iso} height="100" width="100" />
+                <img alt="ISO logo with red text 'ISO' and a globe" src={iso} height="100" width="100" />
               </div>
               <div class="icon-card">
-                <img alt="FDA approved logo with blue text 'FDA' and circular text 'FDA Approved'"  src={fda} height="100" width="100" />
+                <img alt="FDA approved logo with blue text 'FDA' and circular text 'FDA Approved'" src={fda} height="100" width="100" />
               </div>
               <div class="icon-card">
-                <img alt="CE logo with red text 'CE' in a circle"  src={celogo} height="100" width="100" />
+                <img alt="CE logo with red text 'CE' in a circle" src={celogo} height="100" width="100" />
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ function Home() {
               <h2 className="text-center pt-2 explorep" style={{ fontSize: '1.75rem', fontWeight: '700' }}>Discover Our Categories</h2>
             </div>
             <div className="col-md-12">
-              <Products />
+            <Products showOnlyActive={true} />
             </div>
           </div>
 

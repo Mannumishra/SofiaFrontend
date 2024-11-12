@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
-function Products() {
+function Products({ showOnlyActive = false }) { // Accept showOnlyActive prop with a default value of false
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const location = useLocation();
     
-    // Get the search query from the URL
     const searchQuery = new URLSearchParams(location.search).get('search');
 
     const getApiData = async () => {
@@ -23,17 +22,23 @@ function Products() {
         getApiData();
     }, []);
 
-    // Filter the data based on the search query
     useEffect(() => {
+        let filtered = data;
+
+        // Apply status filter if showOnlyActive is true
+        if (showOnlyActive) {
+            filtered = filtered.filter(product => product.categoryStatus === "True");
+        }
+
+        // Apply search filter
         if (searchQuery) {
-            const filtered = data.filter(product =>
+            filtered = filtered.filter(product =>
                 product.categoryName.toLowerCase().includes(searchQuery.toLowerCase())
             );
-            setFilteredData(filtered);
-        } else {
-            setFilteredData(data);
         }
-    }, [searchQuery, data]);
+
+        setFilteredData(filtered);
+    }, [searchQuery, data, showOnlyActive]);
 
     return (
         <div className="container-fluid">

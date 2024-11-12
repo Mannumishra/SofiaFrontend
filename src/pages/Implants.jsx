@@ -46,7 +46,7 @@ function Implants() {
                                 {data.map((implant, index) => (
                                     <div className="col-md-3" key={index}>
                                         <div className="category-card">
-                                            <Link to={`/inplants/${implant.inplantsName}`} className='text-decoration-none'>
+                                            <Link to={`/inplants-details/${implant.inplantsName}`} className='text-decoration-none'>
                                                 <img alt={implant.inplantsName} className="img-fluid" src={`https://api.sofia.digiindiasolutions.com/${implant.inplantsImage}`} width="250" height="230" />
                                                 <div className="category-title  text-dark">
                                                     {implant.inplantsName}

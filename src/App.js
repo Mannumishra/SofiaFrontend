@@ -32,7 +32,7 @@ function App() {
         <Route path="/Ourproduct" element={<OurProduct/>} />
         <Route path="/Implants/:categoryName" element={<Implants/>}/>
         <Route path="/Instruments/:categoryName" element={<Instruments/>} />
-        <Route path="/inplants/:name" element={<Thumbnail/>}/>
+        <Route path="/inplants-details/:name" element={<Thumbnail/>}/>
         <Route path="/instrument-details/:name" element={<InstrumentProduct/>}/>
          <Route path="/GetdealerShip" element={<GetdealerShip/>} /> 
         <Route path="/Certificates" element={<Certificates/>} />
